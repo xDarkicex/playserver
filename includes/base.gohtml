@@ -1,0 +1,27 @@
+<html>
+    <head>
+        {{ template "title" }}
+        <link rel='stylesheet' href='./static/assets/stylesheets/application.css'>
+        {{ if .view }}
+
+            <link rel='stylesheet' href='./static/assets/stylesheets/{{.view}}.css'>
+        
+        {{ end }}
+        {{ template "scripts" . }}
+    </head>
+    <body>
+        {{ template "sidebar" . }}
+        <div id="wrapper">
+            {{ template "content" . }}
+        </div>
+        <footer>
+        </footer>
+    </body>
+</html>
+
+{{ define "scripts" }}
+    <script src='./static/assets/javascript/application.js'></script>
+{{ end }}
+{{ define "sidebar" }}
+
+{{ end }}
